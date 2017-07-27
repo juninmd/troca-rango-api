@@ -1,0 +1,17 @@
+{
+  "name": "troca-rango-api",
+  "version": "1.0.0",
+  "description": "Api responsável pela troca de rango.",
+  "main": "app.js",
+  "repository": "https://github.com/juninmd/troca-rango-api.git",
+  "author": "juninmd <jr_acn@yahoo.com.br>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "consign": "^0.1.6",
+    "express": "^4.15.3",
+    "jano-mysql": "^0.0.6",
+    "md5": "^2.2.1",
+    "shazam-middleware": "^0.0.4"
+  }
+}
