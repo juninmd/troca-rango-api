@@ -540,9 +540,9 @@ setprototypeof@1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/setprototypeof/-/setprototypeof-1.0.3.tgz#66567e37043eeb4f04d91bd658c0cbefb55b8e04"
 
-shazam-middleware@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/shazam-middleware/-/shazam-middleware-0.0.4.tgz#05b244bfec89582fce97fe8bb16a865118f182e1"
+shazam-middleware@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/shazam-middleware/-/shazam-middleware-0.0.5.tgz#0981edd355865918d9d72ecf2a7cf6a30f61b7f3"
   dependencies:
     request "^2.81.0"
 
