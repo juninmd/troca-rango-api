@@ -9,7 +9,7 @@ module.exports = (app) => {
     })
 
     app.post("/usuario", (req, res, next) => {
-        usuarioRep.insert(req.body)
+        usuarioSrv.insert(req.body)
             .then(q => res.status(200).send(q))
             .catch(err => next(err))
     })

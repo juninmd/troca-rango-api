@@ -12,6 +12,7 @@
     "express": "^4.15.3",
     "jano-mysql": "^0.0.6",
     "md5": "^2.2.1",
+    "randomstring": "^1.1.5",
     "shazam-middleware": "^0.0.5"
   }
 }

@@ -1,4 +1,6 @@
 const usuarioRepository = require('../repository/usuarioRepository');
+const md5 = require('md5');
+const randomstring = require("randomstring");
 
 module.exports = {
     getById: (query) => {
@@ -23,6 +25,8 @@ module.exports = {
         });
     },
     insert: (body) => {
+        body.hash = randomstring.generate();
+        body.senha = md5(body.senha + body.hash);
         return usuarioRepository.insert(body);
     }
 };
