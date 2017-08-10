@@ -16,8 +16,23 @@ module.exports = {
                             statusCode: 404
                         });
                     }
-                    q.content = q.content[0];
-                    return resolve(q);
+                    let body = q.content[0];
+
+                    let senhaRequest = md5(query.senha + body.HASH);
+                    if (senhaRequest != body.SENHA) {
+                        return reject({
+                            message: {
+                                userMessage: "Por favor, confira e-mail/senha",
+                                developerMessage: ""
+                            },
+                            statusCode: 404
+                        });
+                    }
+
+                    delete body.SENHA;
+                    delete body.HASH;
+                    
+                    return resolve(body);
                 })
                 .catch(err => {
                     return reject(err);
@@ -25,8 +40,8 @@ module.exports = {
         });
     },
     insert: (body) => {
-        body.hash = randomstring.generate();
-        body.senha = md5(body.senha + body.hash);
+        body.HASH = randomstring.generate();
+        body.SENHA = md5(body.SENHA + body.HASH);
         return usuarioRepository.insert(body);
     }
 };
