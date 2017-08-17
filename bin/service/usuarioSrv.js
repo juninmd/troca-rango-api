@@ -5,13 +5,13 @@ const randomstring = require("randomstring");
 module.exports = {
     getById: (query) => {
         return new Promise((resolve, reject) => {
-            usuarioRepository.getById(query.email, query.senha)
+            usuarioRepository.getById(query.email)
                 .then(q => {
                     if (q.content.length == 0) {
                         return reject({
                             message: {
-                                userMessage: "Por favor, confira e-mail/senha",
-                                developerMessage: ""
+                                userMessage: "Por favor, confira seu e-mail",
+                                developerMessage: "Por favor, confira seu e-mail"
                             },
                             statusCode: 404
                         });
@@ -23,7 +23,7 @@ module.exports = {
                         return reject({
                             message: {
                                 userMessage: "Por favor, confira e-mail/senha",
-                                developerMessage: ""
+                                developerMessage: "Por favor, confira e-mail/senha"
                             },
                             statusCode: 404
                         });

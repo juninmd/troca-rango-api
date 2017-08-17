@@ -2,7 +2,7 @@ const webconfig = require('../webconfig');
 const mysql = require('jano-mysql')(webconfig.database.MYSQL);
 
 module.exports = {
-    getById: (email, senha) => {
+    getById: (email) => {
         return mysql.executeString(`SELECT * FROM smn_tro_usuario WHERE EMAIL = '${email}'`);
     },
     getAll: () => {
