@@ -22,8 +22,8 @@ module.exports = {
                     if (senhaRequest != body.SENHA) {
                         return reject({
                             message: {
-                                userMessage: "Por favor, confira e-mail/senha",
-                                developerMessage: "Por favor, confira e-mail/senha"
+                                userMessage: "Por favor, confira sua senha",
+                                developerMessage: "Por favor, confira sua senha"
                             },
                             statusCode: 404
                         });
